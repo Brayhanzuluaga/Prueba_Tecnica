@@ -50,11 +50,12 @@ def get_event_by_id(db: Session, Event_id: int):
 
 # Esta función se encarga de crear un nuevo evento en la base de datos.
 def create_event(db: Session, event: EventSchema):
+    event_check = event.eventCheck if event.eventCheck is not None else False
     _Event = Event(id=event.id,
                    eventName=event.eventName,
                    eventType=event.eventType,
                    eventDescription=event.eventDescription,
-                   eventCheck=event.eventCheck,
+                   eventCheck=event_check,
                    date=event.date,
                    state=True,
                    management=0)
