@@ -1,8 +1,6 @@
-#import logging
 from fastapi import FastAPI
 from app.Events import routers
 from app.Events.repository import create_tables
-
 
 # Funcion de creacion de las tablas en la base de datos
 create_tables()
