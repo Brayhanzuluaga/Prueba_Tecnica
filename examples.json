@@ -1,0 +1,45 @@
+[{
+    "parameter":{
+       "id":5,
+       "eventName":"Festival de cine",
+       "eventType":"Cine",
+       "eventDescription":"Festival de cine independiente",
+       "eventCheck":false,
+       "date":"2023-04-15T18:00:00.000Z",
+       "management":1
+    }
+ },
+ {
+    "parameter":{
+       "id":6,
+       "eventName":"Conferencia de tecnología",
+       "eventType":"Tecnología",
+       "eventDescription":"Conferencia sobre tecnologías emergentes",
+       "eventCheck":false,
+       "date":"2023-05-20T09:30:00.000Z",
+       "management":2
+    }
+ },
+ {
+    "parameter":{
+       "id":7,
+       "eventName":"Concierto de jazz",
+       "eventType":"Música",
+       "eventDescription":"Concierto de jazz con músicos internacionales",
+       "eventCheck":true,
+       "date":"2023-06-10T20:00:00.000Z",
+       "management":1
+    }
+ },
+ {
+    "parameter":{
+       "id":8,
+       "eventName":"Feria de arte",
+       "eventType":"Arte",
+       "eventDescription":"Feria de arte contemporáneo",
+       "eventCheck":false,
+       "date":"2023-07-05T11:00:00.000Z",
+       "management":3
+    }
+ }
+]
