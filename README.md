@@ -58,3 +58,14 @@ http://127.0.0.1:8000/redoc
 ~~~
 
 ---
+
+## __Pruebas de eventos Estáticos__
+
+Para llevar a cabo las pruebas estáticas, se utiliza un archivo llamado Examples.json que contiene ejemplos iniciales por defecto. Es importante mencionar que el siguiente script solo debe ejecutarse una sola vez y antes de generar otra petición POST.
+
+Para llevar a cabo las pruebas, se debe abrir otra terminal y ejecutar el siguiente comando:
+~~~
+python .\stattic_example.py
+~~~
+
+Este script generará varias peticiones POST y una petición GET, las cuales serán registradas en la tabla de la base de datos del  loc. De esta manera, se podrán realizar pruebas estáticas sobre el comportamiento del sistema en diferentes situaciones.
