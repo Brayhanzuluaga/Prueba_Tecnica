@@ -11,6 +11,28 @@ Primero, clone este repositorio usando el siguiente comando y ubique la consola 
 git clone https://github.com/Brayhanzuluaga/Prueba_Tecnica.git
 ~~~
 
+## __Estructura de carpetas y archivos__
+
+La estructura de las carpetas y archivos es de la siguiente manera: 
+~~~
++ Prueba_Tecnica
+    + app
+        init.py
+        database.py
+        config.py
+        + Events 
+            models.py
+            shemas.py
+            repository.py
+            routes.py
+    main.py
+    README.md
+    requeriments.txt
+    examples.json
+    static_example.py
+~~~
+
+
 ## __Crear el ambiente virtual__
 
 Luego, cree un ambiente virtual y actívelo con los siguientes comandos:
