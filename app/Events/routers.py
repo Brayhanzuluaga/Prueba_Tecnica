@@ -4,7 +4,6 @@ from sqlalchemy.orm import Session
 from app.Events import repository
 from app.Events.schemas import RequestEvent, Response, RequestEventManagement
 from app.database import get_db
-import time
 
 router = APIRouter()
 
@@ -153,7 +152,8 @@ async def update_event_service(request: RequestEventManagement,
             eventCheck=request.parameter.eventCheck,
             date=request.parameter.date,
             management=request.parameter.management)
-        repository.create_log(db, f'Evento de id {_event.id} actualizado correctamente', "Info")
+        repository.create_log(
+            db, f'Evento de id {_event.id} actualizado correctamente', "Info")
         _event.id = _event.id
         return Response(status="Ok",
                         code="200",
