@@ -30,7 +30,7 @@ Descargue e instale PostgreSQL 15 desde el siguiente enlace:
 https://www.postgresql.org/download/
 
 ## __Configurar la base de datos__
-Inicialice la base de datos utilizando la siguiente URL que se encuentra en script config.py:
+Inicialice la aplicacion de postgres, luego en dicha aplicacion crea y nombra la base de datos, finalmente inicializa la base de datos utilizando la siguiente URL que se encuentra en script config.py:
 ~~~
 SQLALCHEMY_DATABASE_URL = "postgresql://[usuario]:[contraseña]@localhost:[puerto]/[Nombre_Base_de_datos]"
 ~~~
