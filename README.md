@@ -65,7 +65,7 @@ Para llevar a cabo las pruebas estáticas, se utiliza un archivo llamado Example
 
 Para llevar a cabo las pruebas, se debe abrir otra terminal y ejecutar el siguiente comando:
 ~~~
-python .\stattic_example.py
+python .\static_example.py
 ~~~
 
 Este script generará varias peticiones POST y una petición GET, las cuales serán registradas en la tabla de la base de datos del  loc. De esta manera, se podrán realizar pruebas estáticas sobre el comportamiento del sistema en diferentes situaciones.
