@@ -22,8 +22,5 @@ async def root():
     """
     return {
         "message": "Api funcionando correctamente",
-        "Link del repositorio": "https://github.com/Brayhanzuluaga"
+        "Link del repositorio": "https://github.com/Brayhanzuluaga/Prueba_Tecnica"
     }
-
-
-# uvicorn main:app --reload
