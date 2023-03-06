@@ -69,3 +69,26 @@ python .\stattic_example.py
 ~~~
 
 Este script generará varias peticiones POST y una petición GET, las cuales serán registradas en la tabla de la base de datos del  loc. De esta manera, se podrán realizar pruebas estáticas sobre el comportamiento del sistema en diferentes situaciones.
+
+---
+
+
+## __Especificación de campos del objeto "Evento"__
+
+El objeto "Evento" tiene los siguientes campos:
+
+ - __"id"__: Identificador numérico del evento, representado por un entero (int).
+
+ - __"eventName"__: Nombre del evento, representado por una cadena de caracteres (str).
+
+ - __"eventType"__: Tipo de evento, representado por una cadena de caracteres (str).
+
+ - __"eventDescription"__: Descripción del evento, representado por una cadena de caracteres (str).
+
+ - __"eventCheck"__: Estado del evento, representado por un valor booleano (bool). Puede ser "Pendiente por revisar" (True) o "Revisado" (False).
+
+ - __"date"__: Fecha del evento, representada por un objeto de tipo datetime.
+
+ - __"management"__: Tipo de gestión requerida para el evento, representado por un entero (int). Puede ser "Sin revisar" (0), "Requiere gestión" (1), o "Sin gestión" (2).
+
+Cada campo del objeto "Evento" tiene un tipo de dato específico, como se indica en la descripción de cada campo. Estos campos son utilizados para almacenar información sobre los eventos, como su nombre, fecha, estado, etc.
