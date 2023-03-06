@@ -2,7 +2,7 @@
 
 ## __Descripción__
 
-Este repositorio contiene una prueba técnica para sistemas inteligentes. La aplicación está implementada usando FastAPI y requiere una base de datos PostgreSQL.
+Este repositorio contiene una prueba técnica para sistemas inteligentes. La aplicación está implementada usando Python 3.9.5,el framework FastAPI 0.92.0 y requiere una base de datos PostgreSQL en su version 15.
 
 ## __Clonar el repositorio__
 
@@ -26,7 +26,7 @@ Para instalar las dependencias necesarias, ejecute el siguiente comando:
 pip install -r requirements.txt
 ~~~
 ## __Descargar e instalar Postgres__
-Descargue e instale PostgreSQL desde el siguiente enlace:
+Descargue e instale PostgreSQL 15 desde el siguiente enlace:
 https://www.postgresql.org/download/
 
 ## __Configurar la base de datos__
