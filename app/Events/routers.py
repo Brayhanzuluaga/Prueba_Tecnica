@@ -192,7 +192,17 @@ async def softdelete(id: int, db: Session = Depends(get_db)):
     """
     Peticion Delete que elimina (soft destroy) el evento indicado.
     """
-    repository.softremove_event(db, event_id=id)
+    try:
+        repository.softremove_event(db, event_id=id)
+    except Exception:
+        repository.create_log(
+        db, f'El evento con id {id} no existe en la base de datos', "Error")
+        return Response(status="Fail", code="404",
+                    message=f'El evento con id {id} no existe en la base de datos').dict(exclude_none=True)
+    
+    return Response(status="Ok", code="200",
+                    message="Success delete data").dict(exclude_none=True)
+
     repository.create_log(
         db, f'El evento con id {id} fue eliminado de manera exitosa', "Info")
     return Response(status="Ok", code="200",
