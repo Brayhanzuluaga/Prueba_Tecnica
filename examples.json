@@ -10,6 +10,16 @@
     }
  },
  {
+   "parameter": {
+     "id": 743,
+     "eventName": "strasdging",
+     "eventType": "saing",
+     "eventDescription": "strwerting",
+     "date": "2023-03-04T20:11:23.392Z",
+     "management": 0
+   }
+ },
+ {
     "parameter":{
        "id":6,
        "eventName":"Conferencia de tecnología",
