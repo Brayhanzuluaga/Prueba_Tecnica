@@ -22,5 +22,4 @@ async def root():
     """
     return {
         "message": "Api funcionando correctamente",
-        "Link del repositorio": "https://github.com/Brayhanzuluaga/Prueba_Tecnica"
-    }
+        "Link del repositorio": "https://github.com/Brayhanzuluaga/Prueba_Tecnica"}
