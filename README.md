@@ -2,7 +2,7 @@
 
 ## __Descripción__
 
-Este repositorio contiene una prueba técnica para sistemas inteligentes. La aplicación está implementada usando Python 3.9.5,el framework FastAPI 0.92.0 y requiere una base de datos PostgreSQL en su version 15.
+La aplicación está implementada usando Python 3.9.5,el framework FastAPI 0.92.0 y requiere una base de datos PostgreSQL en su version 15.
 
 ## __Clonar el repositorio__
 
