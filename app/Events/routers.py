@@ -22,18 +22,20 @@ async def create_event_service(request: RequestEvent,
             db,
             f'El evento con id {request.parameter.id} y nombre {request.parameter.eventName} se creo correctamente',  #noqa
             "Info")
-        return Response(
-            status="Ok", code="200",
-            message="Event created successfully").dict(exclude_none=True)
+        # return Response(
+        #     status="Ok", code="200",
+        #     message="Event created successfully").dict(exclude_none=True)
+        return {"message" : "Event created successfully"}
     except Exception:
         db.rollback()
         repository.create_log(
             db,
             f'El evento con id {request.parameter.id} fue previemente creado',  #noqa
             "Error")
-        return Response(
-            status="FAIL", code="400",
-            message="Event id previously created").dict(exclude_none=True)
+        # return Response(
+        #     status="FAIL", code="400",
+        #     message="Event id previously created").dict(exclude_none=True)
+        return {"message" : "Event previously created"}
 
 
 # Peticion Get que devuelve una lista de eventos
@@ -47,10 +49,12 @@ async def get_event(skip: int = 0,
     utilizando parámetros opcionales para paginar los resultados.
     """
     _events = repository.get_event(db)
+    return _events
+    """
     return Response(status="Ok",
                     code="200",
                     message="Success fetch all data",
-                    result=_events)
+                    result=_events)"""
 
 
 # Peticion Get que devuelve una lista del log de los eventos
@@ -64,11 +68,13 @@ async def eventLogInfo(skip: int = 0,
     utilizando parámetros opcionales para paginar los resultados.
     """
     _logs = repository.get_event_log(db)
+    return _logs
+    """
     return Response(status="Ok",
                     code="200",
                     message="Success fetch all data",
                     result=_logs)
-
+"""
 
 # Peticion Get que devuelve una lista de eventos filtrados
 # clasificandolos en revisado o sin revisar
