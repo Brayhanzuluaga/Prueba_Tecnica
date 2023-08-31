@@ -30,6 +30,7 @@ La estructura de las carpetas y archivos es de la siguiente manera:
     requeriments.txt
     examples.json
     static_example.py
+    test_main.py
 ~~~
 
 
@@ -94,7 +95,14 @@ Este script generará varias peticiones POST y una petición GET, las cuales ser
 
 ---
 
+## __Pruebas unitarias__
 
+Se crearon algunas pruebas unitarias para la validacion del correcto funcionamiento de la aplicacion. Para correr estas pruebas usar el siguiente comando:
+~~~
+pytest .\test_main.py -v -p no:warnings
+~~~
+
+---
 ## __Especificación de campos del objeto "Evento"__
 
 El objeto "Evento" tiene los siguientes campos:
