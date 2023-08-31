@@ -23,8 +23,15 @@ def test_get_events():
     assert response.status_code == 200
 
 
+def test_get_nonexistent_event_id():
+    id = random.randint(0, 10000)
+    response = client.get(f"/event/{id}")
+    assert response.status_code == 404
+    assert response.json() == {"detail": f"The user with id {id} does not exist in the database"}
+
+
 def test_create_item():
-    id = random.randint(0, 1000)
+    id = random.randint(0, 10000)
     response = client.post(
         "/event/create",
         json={
@@ -38,6 +45,7 @@ def test_create_item():
     )
     assert response.status_code == 200
     assert response.json() == {"message": "Event created successfully"}
+
 
 def test_create_existing_item():
     response = client.post(
@@ -53,3 +61,9 @@ def test_create_existing_item():
     )
     assert response.status_code == 200
     assert response.json() == {"message": "Event previously created"}
+
+
+def test_get_events_management():
+    response = client.get("/events/management?eventCheck=True&management=7")
+    assert response.status_code == 404
+    assert response.json() == {"detail": "Type of management required for the event, represented by an integer (int). It can be No review (0), Management required (1), or No management (2)."} #noqa
