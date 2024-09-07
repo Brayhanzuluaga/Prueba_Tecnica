@@ -1,4 +1,4 @@
-# __Prueba_Tecnica Readme__
+# __Gestion de eventos Readme__
 
 ## __Descripción__
 
